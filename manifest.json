@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "AI Assistant",
+  "version": "1.0",
+  "description": "Assistance intelligente",
+  "permissions": ["activeTab", "contextMenus", "storage"],
+  "host_permissions": ["https://api.mistral.ai/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "a.png"
+  },
+  "icons": {
+    "48": "a.png",
+    "128": "a.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "web_accessible_resources": [{
+    "resources": ["explanation.html", "explanation.js", "a.png"],
+    "matches": ["*://*/*"]
+  }]
+}
