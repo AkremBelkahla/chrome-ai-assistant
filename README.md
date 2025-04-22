@@ -1,5 +1,8 @@
 # AI Assistant Browser Extension
 
+## Warning
+This project is currently under development and may not be stable.
+
 ## Description
 AI Assistant is a browser extension that provides explanations for selected text on web pages using the Mistral AI API.
 
